@@ -1,0 +1,48 @@
+input[type="text"]{
+    color:red;
+    background-color: yellow;
+    border: 10px solid green;
+}
+input[type="password"]{
+    color:blue;
+    background-color: yellow;
+    border: 10px solid #6a0080;
+}
+ul > li {
+    color:red;
+    font-size: 30px;
+
+}
+ul > li:nth-child(3){
+    color:green;
+}
+h1+p{
+    color:red;
+    font-size: 30px;
+    background-color: green;
+    font-weight: bold;
+
+}
+a:hover{
+    color:red;
+    font-size: 30px;
+    background-color: blue;
+    font-weight: bold;
+
+}
+.cotainer:before{
+    content:"hello world";
+    color:#6a0080;
+    font-size: 30px;
+    background-color: lightblue;
+    width: 200px;
+    height:200px;
+}
+div:not(.cotainer){
+    color:lightgreen;
+    border: 10px solid green;
+    font-size: 30px;
+    background-color: blue;
+    width:200px;
+    height:200px;
+}

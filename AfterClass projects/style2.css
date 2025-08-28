@@ -1,0 +1,25 @@
+.example{
+    background-color: red;
+    padding:20px;
+    border: 1px solid green;
+    margin: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color:#f4f1f1;
+
+}
+.example2{
+    background-color: purple;
+    padding: 20px;
+    border: 5 px solid  blueviolet;
+    margin-top: 200px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+img#type1{
+    float:right
+}
+img#type2{
+    float:left
+}
