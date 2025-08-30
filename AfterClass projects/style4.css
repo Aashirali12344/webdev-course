@@ -1,0 +1,101 @@
+.staticdiv{
+    position: static;
+    background-color: red;
+    width:100px;
+    height: 100px;
+    margin: 10px;
+    border: 5px solid black;
+    color: white;
+    font-size: 15px;
+}
+.relativediv{
+    position: relative;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 5px solid black;
+    color: white;
+    font-size: 15px;
+    
+}
+.fixeddiv{
+    position:fixed;
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    margin:10px;
+    border: 5px solid black;
+    color: white;
+    font-size: 15px;
+        top: 100px;
+        left: 50px;  
+
+}
+.absolutediv{
+    position:absolute;
+    background-color:yellow;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 5px solid black;
+    color:white;
+    font-size: 15px;
+        top:100px;
+        left: 1000px;
+
+
+}
+.stickydiv{
+    position:sticky;
+    background-color: orange;
+    width:100px;
+    height:100px;
+    margin: 10px;
+    border: 5px solid black;
+    color: white;
+    font-size: 15px;
+        top: 0px;
+        left: 50px;
+
+}
+.opacitydiv{
+    background-color: purple;
+    width: 1000px;
+    height:50px;
+    margin:10px;
+    color: white;
+    opacity: 0.1;
+}
+.opacitydiv2{
+    background-color: purple;
+    width: 1000px;
+    height:50px;
+    margin:10px;
+    color: white;
+    opacity: 0.2;
+}
+.opacitydiv3{
+    background-color: purple;
+    width: 1000px;
+    height:50px;
+    margin:10px;
+    color: white;
+    opacity: 0.3;
+}
+.opacitydiv4{
+    background-color: purple;
+    width: 1000px;
+    height:50px;
+    margin:10px;
+    color: white;
+    opacity: 0.4;
+}
+.opacitydiv5{
+    background-color: purple;
+    width: 1000px;
+    height:50px;
+    margin:10px;
+    color: white;
+    opacity: 0.5;
+}
