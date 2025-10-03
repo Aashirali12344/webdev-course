@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions in Javascript</title>
+        <link rel="stylesheet" href="style5.css" />
+    </head>
+    <body>
+      <h1>Function in Javascript</h1>
+      <button type="button" onclick="checknumber(5)">check number </button><br/>
+      <p id="demo"></p>
+      <script>
+        function multiply(){
+            a=19;
+            b=23;
+            c=a*b
+            document.write(" The prouduct of 19 and 23 is "+ c ) ;  
+        }
+        multiply() 
+        
+        function divide(){
+            x=250;
+            y=25;
+            z=x/y
+            document.write(" <br/>250 divided by 25 is "+ z)
+        }
+        divide()
+        function checknumeber(number){
+            if (number==5 ){
+                document.write("<br/> yes this is number 5");
+            }
+            else{
+                document.write("<br/> no this is not number 5 infact this is number" + num)
+            }
+        }
+        function hello(message){
+            document.getElementById("demo").innerHTML=message;
+        }
+        hello("welcome to javascript");
+        var result = function (a,b) {return a*b}
+        document.write("<br/> this product is" + result(2+3));
+
+        
+
+      </script>
+    </body>
+</html>
