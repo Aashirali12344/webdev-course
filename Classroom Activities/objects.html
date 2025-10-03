@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects in Javascript</title>
+        <link rel="stylesheet" href="style5.css" />
+    </head>
+    <body>
+        <h1>Activity 1</h1>
+        <script>
+            var person = {
+                firstname:"Aashir",
+                lastname:"Ali",
+                PhoneNumber:12345678,
+                Salary:5000
+            }
+            document.write("<br/> First name : "+person.firstname)
+            document.write("<br/> Last name : "+person.lastname)
+            document.write("<br/> PhoneNumber : "+person.PhoneNumber)
+            document.write("<br/> Salary : "+person.Salary)
+
+            var value = -345;
+            document.write("<br/> the value is "+Math.abs(value))
+            document.write("<br/> the value is "+Math.sin(23))
+            document.write("<br/> the value is "+Math.cos(45))
+            document.write("<br/> the value is "+Math.tan(45))
+            document.write("<br/> the value is "+Math.asin(.45))
+            document.write("<br/> the value is "+Math.acos(.033))
+            document.write("<br/> the value is "+Math.atan(5.9))
+
+            function findmax(){
+                var i;
+                var max=0
+                for(i=0; i< arguments.length;i++){
+                    if(arguments[i] > max){
+                        max = arguments[i]
+                    }
+                }
+                return max;
+            }
+            document.write("<br/> the maximum value is " + findmax(5,7,76,45,9856,89,678,129,145))
+
+            
+        </script>
+    </body>
+</html>
