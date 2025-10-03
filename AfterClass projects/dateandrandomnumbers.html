@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Numbers, Date, and Rounded Number</title>
+</head>
+<body>
+  <h1>Random Numbers, Date, and Rounded Number</h1>
+
+  <script>
+    // 1. Random numbers
+    document.write("<h2>Random Numbers:</h2>");
+    for (var i = 0; i < 5; i++) {
+      var num = Math.random() * 100; // random number between 0 and 100
+      document.write(num.toFixed(2) + "<br>"); // round to 2 decimals
+    }
+
+    // 2. Current date
+    document.write("<h2>Current Date:</h2>");
+    var currentDate = new Date();
+    document.write(currentDate + "<br>");
+
+    // 3. Rounded numbers
+    document.write("<h2>Rounded Numbers:</h2>");
+    var numbersToRound = [3.14, 5.67, 9.81, 2.72];
+    for (var i = 0; i < numbersToRound.length; i++) {
+      document.write(Math.round(numbersToRound[i]) + "<br>");
+    }
+  </script>
+
+</body>
+</html>
