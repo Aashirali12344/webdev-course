@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arrays and call Stack in Javascript</title>
+        <link rel="stylesheet" href="style5.css" />
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <script>
+            marks=10;
+            marks_number=[20,7,24,13,19]  //array
+            var fruits=["apples","banana","orange","grapes","lemon"]
+            document.write(fruits)
+            document.write("<br/>"+fruits[4])
+            document.getElementById("demo").innerHTML=fruits[0]
+
+            //stack
+             var books=["HTML","CSS","Bootstrap","Javascript"]
+             document.getElementById("demo1").innerHTML= books.join("a")
+             document.getElementById("demo2").innerHTML=books.pop();
+             documet.write("<br/>"+books)
+             document.getElementById("demo2").innerHTML=books.pop();
+             document.write("<br/>"+books)
+
+             function add(a,b){
+                return a+b ;
+             }
+             function average(a,b){
+                return add(a,b)/2;
+             }
+             var result= average(10,13);
+             document.write("<br/> the result is " + result)
+        </script>
+    </body>
+</html>
