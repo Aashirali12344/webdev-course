@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Objects and Arrays Project</title>
+</head>
+<body>
+  <h2>Objects and Arrays Example</h2>
+
+  <p id="objectDisplay"></p>
+  <p id="arrayDisplay"></p>
+  <p id="joinDisplay"></p>
+  <p id="popDisplay"></p>
+
+  <script>
+    // Creating an object
+    var student = {
+      name: "Aashir",
+      age: 15,
+      grade: "10th"
+    };
+
+    
+    document.getElementById("objectDisplay").innerHTML =
+      "Student Name: " + student.name +
+      "<br>Age: " + student.age +
+      "<br>Grade: " + student.grade;
+
+    // Creating an array
+    var fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    
+    document.getElementById("arrayDisplay").innerHTML =
+      "First fruit: " + fruits[0] +
+      "<br>Second fruit: " + fruits[1] +
+      "<br>All fruits: " + fruits;
+
+    
+    var joinedFruits = fruits.join(" | ");
+    document.getElementById("joinDisplay").innerHTML =
+      "Joined Array: " + joinedFruits;
+
+    
+    fruits.pop();
+    document.getElementById("popDisplay").innerHTML =
+      "After pop(): " + fruits;
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum and Trigonometric Functions Project</title>
+</head>
+<body>
+  <h2>Sum of Arguments and Trigonometric Values</h2>
+
+  <p id="sumResult"></p>
+  <p id="trigResults"></p>
+
+  <script>
+    // Function to find sum of arguments
+    function sumOfArgs(a, b, c) {
+      return a + b + c;
+    }
+
+    // Call function with sample values
+    var total = sumOfArgs(10, 20, 30);
+    document.getElementById("sumResult").innerHTML = "Sum of 10, 20, 30 is: " + total;
+
+    // Function to convert degrees to radians
+    function toRadians(degrees) {
+      return degrees * (Math.PI / 180);
+    }
+
+    // Choose an angle in degrees
+    var angle = 45;
+
+    // Calculate trigonometric values
+    var sine = Math.sin(toRadians(angle));
+    var cosine = Math.cos(toRadians(angle));
+    var tangent = Math.tan(toRadians(angle));
+
+    // Display results
+    document.getElementById("trigResults").innerHTML =
+      "For angle " + angle + "°:" +
+      "<br>sin(" + angle + ") = " + sine.toFixed(4) +
+      "<br>cos(" + angle + ") = " + cosine.toFixed(4) +
+      "<br>tan(" + angle + ") = " + tangent.toFixed(4);
+  </script>
+</body>
+</html>
