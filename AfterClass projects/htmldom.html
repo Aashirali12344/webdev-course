@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects and Arrays Project</title>
+  </head>
+  <body>
+    <h2>Display Object and Array Data</h2>
+
+    <button onclick="showData()">Show Data</button>
+    <p id="output"></p>
+
+    <script>
+      function showData() {
+        
+        let person = {
+          name: "Ali",
+          age: 16,
+          country: "Pakistan"
+        };
+
+        
+        let objectText = "Object Data:<br>";
+        for (let key in person) {
+          objectText += key + ": " + person[key] + "<br>";
+        }
+
+
+        let fruits = ["Apple", "Mango", "Banana", "Orange"];
+
+        
+        let arrayText = "<br>Array Data:<br>";
+        arrayText += "First fruit: " + fruits[0] + "<br>";
+        arrayText += "Second fruit: " + fruits[1] + "<br>";
+
+        
+        arrayText += "<br>Using join(): " + fruits.join(", ") + "<br>";
+
+        
+        fruits.pop();
+        arrayText += "After pop(): " + fruits.join(", ");
+
+        
+        document.getElementById("output").innerHTML = objectText + arrayText;
+      }
+    </script>
+  </body>
+</html>
