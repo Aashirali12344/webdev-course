@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>CLasses in Javascript</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            class student{
+                constructor(name, age , course){
+                    this.name=name;
+                    this.age=age;
+                    this.course=course;
+                }
+                printData(){
+                    document.write("<br/>My name is "+this.name)
+                    document.write("<br/>My age is"+this.age)
+                    document.write("<br/>My course is"+this.course)
+                }
+                static   hello(){
+                    document.write("<br/>hello")
+                }
+            }
+            let student1=new student("Aashir", 12 ,"grade 8");
+            student1.printData();
+            let student2=new student("Ali", 14 ,"grade10")
+            student2.printData()
+
+            Student.hello()
+            class car{
+                constructor(brand){
+                    this.carname=brand
+                }
+                present(){
+                    return "<br/>i have " + this.carname;
+                }
+            }
+            class Model extends car{
+                constructor (brand,model){
+                    super(brand);
+                    this.model=model
+                }
+                show(){
+                return this.present()+ " , it is a model" +this.model  
+            }
+        }
+        let mycar=new Model("toyota","Corolla")
+        document.getElementById("demo").innerHTML=mycar.show()
+        </script>
+    </body>
+</html>
