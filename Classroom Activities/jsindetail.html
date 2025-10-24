@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript in Detail</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="strings"></p>
+        <p id="error"></p>
+        <p id="arrow"></p>
+        <script>
+            var marks =10;
+            var name="Aashir"
+            var x=60
+            var y=40
+            var code ="abc"
+            var decode ="xyz"
+            var fruits= ["grapes","Apple","banana"]
+            document.write(typeof(marks))
+            document.write("<br/>")
+            document.write(typeof(name))
+            document.write("<br/>")
+            document.write(typeof(fruits))
+            document.getElementById("demo").innerHTML= x+y
+            document.getElementById("strings").innerHTML= String(x) + String(y)
+            document.getElementById("strings").innerHTML= Number(x) + Number(y)
+
+            try{
+                alert("welcome")
+            }
+            catch (error){
+                document.getElementById("error").innerHTML= error.message;
+            }
+            add=(a,b) => a+b;
+            document.getElementById("arrow").innerHTML= "the sum is "+add(12,23)
+
+        </script>
+    </body>
+</html>
