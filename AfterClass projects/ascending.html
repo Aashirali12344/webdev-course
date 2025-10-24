@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Mapping and Sorting</title>
+  </head>
+  <body>
+    <h2>Array Mapping and Sorting Example</h2>
+
+    <p id="original"></p>
+    <p id="mapped"></p>
+    <p id="ascending"></p>
+    <p id="descending"></p>
+
+    <button onclick="showAscending()">Show Ascending Order</button>
+    <button onclick="showDescending()">Show Descending Order</button>
+
+    <script>
+      
+      let numbers = [12, 5, 8, 21, 15];
+
+      
+      let mapped = numbers.map(num => num * 3);
+
+      
+      document.getElementById("original").innerHTML = "Original Array: " + numbers.join(", ");
+      document.getElementById("mapped").innerHTML = "Mapped (×3): " + mapped.join(", ");
+
+      function showAscending() {
+        let ascending = [...mapped].sort((a, b) => a - b);
+        document.getElementById("ascending").innerHTML = "Ascending Order: " + ascending.join(", ");
+      }
+
+      
+      
+      function showDescending() {
+        let descending = [...mapped].sort((a, b) => b - a);
+        document.getElementById("descending").innerHTML = "Descending Order: " + descending.join(", ");
+      }
+    </script>
+  </body>
+</html>

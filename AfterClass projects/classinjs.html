@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class Inheritance with Static Method</title>
+  </head>
+  <body>
+    <h2>Class Inheritance and Static Method Example</h2>
+    <p id="output"></p>
+
+    <script>
+      // Base class
+      class Vehicle {
+        constructor(brand, model) {
+          this.brand = brand;
+          this.model = model;
+        }
+
+        // Instance method
+        showDetails() {
+          return `Brand: ${this.brand}, Model: ${this.model}`;
+        }
+
+        // Static method
+        static category() {
+          return "This is a Vehicle.";
+        }
+      }
+
+      // Child class inheriting Vehicle
+      class Car extends Vehicle {
+        constructor(brand, model, color) {
+          super(brand, model); // call parent constructor
+          this.color = color;
+        }
+
+        // Method to display all properties
+        displayInfo() {
+          return `${this.showDetails()}, Color: ${this.color}`;
+        }
+      }
+
+      // Create object of child class
+      let myCar = new Car("Toyota", "Supra", "Red");
+
+      // Access static method (called using class name, not object)
+      let categoryInfo = Vehicle.category();
+
+      // Display results
+      document.getElementById("output").innerHTML =
+        categoryInfo + "<br>" + myCar.displayInfo();
+    </script>
+  </body>
+</html>
