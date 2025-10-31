@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>JSON in Javascript</head>
+    <body>
+        <p id="result"></p>
+        <p id="demo"></p>
+        <p id=demo1></p>
+        <p id="callback"></p>
+        <script>
+            var myinfo={
+                name:"Aashir",
+                age:13,
+                grade:8,
+            }
+            var mystring= JSON.stringify(myinfo)
+            document.getElementById("result").innerHTML=mystring
+            var myjsobj= JSON.parse(mystring)
+            document.getElementById("demo").innerHTML=myjsobj.name
+             async function add(a,b){
+                let response = await a+b ;
+                document.write("the result is" + response)
+                return response
+             }
+             function display(some){
+                document.getElementById("demo").innerHTML= some;
+             }
+             result = add(23,65)
+             document.write("the reuslt is "+ result)
+             display("hello")
+
+
+             function mydisplay(some){
+                document.getElementById("demo1").innerHTML = some;
+             }
+             function sum(a, b) {
+                var s = a + b;
+                mydisplay(s);
+             }
+             let mypromise = new Promise(function(myresolve, myreject){
+                let x =5;
+                of(x==0){
+                    myresolve("OK");
+                } else {
+                    mreject("Error");
+                }
+             });
+             mypromise.then(
+                fucntion(value) { sum(5,5);},
+                function(error){ mydisplay(error);}
+            );
+            function myfunction (num1, num2, mycallback){
+                let sum= num1+num2;
+                mycallback(sum)
+            }
+            function display2(some){
+                document.getElementById("callback").innerHTML=some;
+            }
+            myfunction(2,4,display2)
+            
+        </script>
+
+    </body>
+</html>

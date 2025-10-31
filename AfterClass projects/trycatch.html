@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Try and Catch Example</title>
+</head>
+<body>
+  <h2>Try and Catch Error Example</h2>
+  <p id="message"></p>
+
+  <script>
+    function createError() {
+      try {
+        // Intentionally cause an error
+        let result = someUndefinedFunction();
+        document.getElementById("message").innerText = result;
+      } catch (error) {
+        document.getElementById("message").innerText = "An error occurred: " + error.message;
+      }
+    }
+
+    createError();
+  </script>
+</body>
+</html>

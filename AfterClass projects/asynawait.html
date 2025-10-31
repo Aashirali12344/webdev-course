@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Async Await Example</title>
+</head>
+<body>
+  <h2>Async and Await Example</h2>
+  <p id="result">Loading...</p>
+
+  <script>
+    
+    function fetchData() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve("Data loaded successfully!");
+        }, 2000);
+      });
+    }
+
+    async function displayData() {
+      const result = await fetchData();
+      document.getElementById("result").innerText = result;
+    }
+
+    displayData();
+  </script>
+</body>
+</html>
