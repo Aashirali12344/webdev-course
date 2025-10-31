@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Validation in JS</title>
+        <link rel="stylesheet" href="style5.css" />
+    </head>
+    <body>
+        <form name="register" onsubmit="validate(event)">
+        Name : <input type="text" name="fname" id="name" />
+        <input type="submit" value="submit" />
+        <p id="message"></p>
+        </form>
+    </br>
+    <p>enter a number and click on</p>
+    <input type="number" name="num" id="num" min="10" max="100" required/>
+    <button type="button" onclick="myfunction()">ok</button>
+    <p>please enter the number greater than 10 and less than 100</p>
+    <p id=result1></p>
+    <div class="wrapper">
+
+<div class="container">
+
+<h1>Calculator</h1>
+
+<div class="row">
+
+<input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly />
+
+<input type="button" value="+" onclick="setScreenValue('+')"/>
+
+<input type="button" value="1" onclick="setScreenValue('1')"/>
+
+<input type="button" value="2" onclick="setScreenValue('2')"/>
+
+<input type="button" value="3" onclick="setScreenValue('3')"/>
+
+<input type="button" value="-" onclick="setScreenValue('-')"/>
+
+</div>
+
+<div class="row">
+
+<input type="button" value="4" onclick="setScreenValue('4')" />
+
+<input type="button" value="5" onclick="setScreenValue('5')" />
+
+<input type="button" value="6" onclick="setScreenValue('6')" />
+
+<input type="button" value="x" onclick="setScreenValue('*')" />
+
+</div>
+
+<div class="row">
+
+<input type="button" value="7" onclick="setScreenValue('7')" />
+
+<input type="button" value="8" onclick="setScreenValue('8')" />
+
+<input type="button" value="9" onclick="setScreenValue('9')" />
+
+<input type="button" value="/" onclick="setScreenValue('/')"/>
+
+</div>
+
+<div class="row">
+
+<input type="button" value="%" onclick="setScreenValue('%')" />
+
+<input type="button" value="0" onclick="setScreenValue('0')" />
+
+<input type="button" value="." class="dot" onclick="setScreenValue('.')" />
+
+<input type="button" value="=" onclick="calculateResult()" />
+
+</div>
+
+<div class="row">
+
+<input type="button" value="CLEAR" onclick="clearScreen()" id="clear" class="clear-button"/>
+
+</div>
+
+</div>
+
+</div>
+<script>
+    function validate(e){
+
+e.preventDefault();
+
+var x= document.forms["register"]["fname"].value;
+
+if(x=="")
+
+{
+
+alert("please enter the name")
+
+return ;
+
+}
+
+else{
+
+document.getElementById("message").innerHTML="welcome to my office " + x ;
+
+}
+
+}
+
+function myfunction(){
+
+var inputnumber=document.getElementById("num");
+
+if(!inputnumber.checkValidity()){
+
+document.getElementById("result1").innerHTML=inputnumber.validationMessage;
+
+}
+
+else{
+
+document.getElementById("result1").innerHTML="you have entered number correctly OK"
+
+}
+
+}
+
+
+function clearScreen(){
+
+document.getElementById("result").value="";
+
+}
+
+
+function setScreenValue(value){
+
+document.getElementById("result").value += value;
+
+}
+
+
+function calculateResult(){
+
+var data = document.getElementById("result");
+
+var expression = data.value.trim();
+
+
+if(expression==="")
+
+{
+
+data.value="invalid expression"
+
+return ;
+
+}
+
+try{
+
+data.value=eval(expression);
+
+}
+
+catch(e)
+
+{
+
+data.value= "invalid expression"
+
+}
+
+}
+</script>
+    </body>
+</html>
