@@ -119,4 +119,13 @@ width: auto;
 height: 100vh;
 
 
+}  
+.about{
+    background-color: #313552;
+    border-radius: 0.5 rem;
 }
+.card{
+    border-bottom: 8px solid #f5ba09
+}
+
+
