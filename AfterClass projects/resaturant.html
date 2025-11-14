@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        .section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Menu */
+        .menu-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .portfolio-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .portfolio-card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .portfolio-card p {
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU SECTION -->
+    <div class="section">
+        <h2>Our Menu</h2>
+        <div id="menu"></div>
+    </div>
+
+    <!-- PORTFOLIO SECTION -->
+    <div class="section">
+        <h2>Portfolio</h2>
+        <div id="portfolioGrid" class="portfolio-grid"></div>
+    </div>
+
+<script>
+    // Menu items with REAL food images
+    const menuItems = [
+        { 
+            name: "Margherita Pizza", 
+            price: "$12", 
+            img: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=400" 
+        },
+        { 
+            name: "Chicken Alfredo", 
+            price: "$15", 
+            img: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400" 
+        },
+        { 
+            name: "Cheesecake Slice", 
+            price: "$6", 
+            img: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?w=400" 
+        }
+    ];
+
+    const menuContainer = document.getElementById("menu");
+
+    menuItems.forEach(item => {
+        menuContainer.innerHTML += `
+            <div class="menu-item">
+                <img src="${item.img}">
+                <div>
+                    <h3>${item.name}</h3>
+                    <p>${item.price}</p>
+                </div>
+            </div>
+        `;
+    });
+
+    // Portfolio - real restaurant photos
+    const portfolioItems = [
+        { 
+            title: "Fine Dining Dish", 
+            img: "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400" 
+        },
+        { 
+            title: "Restaurant Interior", 
+            img: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=400" 
+        },
+        { 
+            title: "Chef Preparing Food", 
+            img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400" 
+        }
+    ];
+
+    const portfolioGrid = document.getElementById("portfolioGrid");
+
+    portfolioItems.forEach(p => {
+        portfolioGrid.innerHTML += `
+            <div class="portfolio-card">
+                <img src="${p.img}">
+                <p>${p.title}</p>
+            </div>
+        `;
+    });
+</script>
+
+</body>
+</html>

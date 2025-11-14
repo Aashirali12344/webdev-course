@@ -128,4 +128,15 @@ height: 100vh;
     border-bottom: 8px solid #f5ba09
 }
 
+#socialmedia{
+    background-color: #313552;
+}
+.Media_link{
+    padding: 1rem;
+    max-width: 15rem;
+    margin-left: 1rem;
+    border: 2px solid #5ba09f;
+    border-radius: 0.5rem;
+}
+
 
