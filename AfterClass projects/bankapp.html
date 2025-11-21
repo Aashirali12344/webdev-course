@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Bank Tracker</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: linear-gradient(135deg, #4facfe, #00f2fe); min-height: 100vh; }
+        .container { max-width: 500px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        input, select, button { width: 100%; padding: 10px; margin-top: 10px; }
+        #list { margin-top: 20px; }
+        .item { padding: 10px; background: #eee; margin-top: 5px; border-radius: 5px; display: flex; justify-content: space-between; }
+        .income { color: green; }
+        .expense { color: red; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Bank Income & Expense Tracker</h2>
+
+        <input id="amount" type="number" placeholder="Amount">
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+        <button onclick="addEntry()">Add Entry</button>
+
+        <h3>Balance: <span id="balance">0</span></h3>
+
+        <div id="list"></div>
+    </div>
+
+    <script>
+        let balance = 0;
+
+        function addEntry() {
+            const amount = Number(document.getElementById('amount').value);
+            const type = document.getElementById('type').value;
+            if (!amount) return;
+
+            const list = document.getElementById('list');
+            const item = document.createElement('div');
+            item.className = 'item';
+
+            if (type === 'income') {
+                balance += amount;
+                item.innerHTML = `<span class="income">+ ${amount}</span>`;
+            } else {
+                balance -= amount;
+                item.innerHTML = `<span class="expense">- ${amount}</span>`;
+            }
+
+            list.appendChild(item);
+            document.getElementById('balance').innerText = balance;
+            document.getElementById('amount').value = '';
+        }
+    </script>
+</body>
+</html>
